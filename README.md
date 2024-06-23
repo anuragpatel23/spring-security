@@ -18,3 +18,7 @@ Flow->
     - Which then checks what is the type of authentication present
     - then calls the userDetails
     - Finally then it sets the Security context authenticated
+
+-Whatever we can do through antMatchers for rolebased authentication can also be done through Preauthorize annotation also.
+
+use @EnableGlobalMethodSecurity(prePostEnabled = true) annotation on the class and then apply @PreAuthorize("hasRole('ADMIN')") on the method.
