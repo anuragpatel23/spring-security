@@ -24,6 +24,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .httpBasic();
+                //here we have used Basic authentication
     }
 
     @Override
