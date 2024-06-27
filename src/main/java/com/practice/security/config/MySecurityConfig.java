@@ -15,7 +15,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
-    @Override
+
+    /**
+     *
+     * @param auth
+     * @throws Exception
+     * @apiNote Use this method for Basic authentication
+     *
+     */
+
+    /*@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
@@ -25,7 +34,26 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic();
                 //here we have used Basic authentication
-    }
+    }*/
+
+    /**
+     *
+     * @param http
+     * @throws Exception
+     * @apiNote Use this method for Form login implementation
+     */
+    /*@Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers("/home/**").hasRole("ADMIN")
+                .anyRequest()
+                .authenticated()
+                .and()
+                .formLogin();
+    }*/
+
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
